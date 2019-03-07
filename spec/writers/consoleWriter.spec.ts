@@ -1,8 +1,8 @@
-import {SinonSpy, spy, assert} from 'sinon';
+import {assert, SinonSpy, spy} from 'sinon';
 import {consoleWriter} from '../../src/internal/writers/consoleWriter';
 
 describe('writers/consoleWriter', () => {
-  let consoleSpy: SinonSpy;
+  let consoleSpy: SinonSpy<[any?, ...any[]]>;
 
   beforeEach(() => {
     consoleSpy = spy(console, 'log');
